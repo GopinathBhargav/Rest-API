@@ -11,7 +11,8 @@ import cucumber.api.junit.Cucumber;
 import features.*;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features="src/test/java/features", glue="stepdefinitions",tags= {"@add"},format = {"pretty", "html:target/Destination"} )
+@CucumberOptions(features="src/test/java/features", glue="stepdefinitions",tags= {"@add"},format = {"pretty", "html:target/Destination"},
+plugin= "json:target/jsonreports/cucumberreports.json")
 public class TestRunner {
 	
 	@BeforeClass

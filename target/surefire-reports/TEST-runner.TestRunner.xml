@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="13" failures="0" name="runner.TestRunner" time="0.004" errors="0" skipped="0">
+<testsuite tests="13" failures="0" name="runner.TestRunner" time="0.003" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="cucumber.options" value="--tags @add"/>
     <property name="java.vm.version" value="11.0.4+10-LTS"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-11.0.4.jdk/Contents/Home/lib"/>
     <property name="gopherProxySet" value="false"/>
@@ -46,7 +45,7 @@
     <property name="java.class.path" value="/Users/gopinathbhargavvurakaranam/Applications/apache-maven-3.6.2/boot/plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="11"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test -Dcucumber.options=--tags @add"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test verify"/>
     <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-11.0.4.jdk/Contents/Home"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -70,7 +69,7 @@
   <testcase classname="Scenario: Adding a place and verifying it" name="And query parameters are passed" time="0"/>
   <testcase classname="Scenario: Adding a place and verifying it" name="And payload is passed with the expected values" time="0"/>
   <testcase classname="Scenario: Adding a place and verifying it" name="And pass the &quot;post&quot; resource name" time="0"/>
-  <testcase classname="Scenario: Adding a place and verifying it" name="Then validate the status as &quot;200&quot;" time="0.001"/>
+  <testcase classname="Scenario: Adding a place and verifying it" name="Then validate the status as &quot;200&quot;" time="0"/>
   <testcase classname="Scenario: Adding a place and verifying it" name="And retrieve the &quot;place_id&quot; value" time="0"/>
   <testcase classname="Scenario: Adding a place and verifying it" name="Given the environment URL" time="0"/>
   <testcase classname="Scenario: Adding a place and verifying it" name="And query parameters are passed" time="0"/>
