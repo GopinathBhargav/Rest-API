@@ -134,28 +134,28 @@ formatter.match({
   "location": "StepDefinitions.the_environment_URL()"
 });
 formatter.result({
-  "duration": 532489224,
+  "duration": 548800191,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions.header_values_are_passed(String,String\u003e)"
 });
 formatter.result({
-  "duration": 146606107,
+  "duration": 149498458,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions.queryParamValues(String,String\u003e)"
 });
 formatter.result({
-  "duration": 6572471,
+  "duration": 8373863,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions.payload_is_passed_with_the_expected_values()"
 });
 formatter.result({
-  "duration": 265165627,
+  "duration": 283731807,
   "status": "passed"
 });
 formatter.match({
@@ -168,7 +168,7 @@ formatter.match({
   "location": "StepDefinitions.pass_the_resource_name(String)"
 });
 formatter.result({
-  "duration": 782631436,
+  "duration": 767731316,
   "status": "passed"
 });
 formatter.match({
@@ -181,7 +181,7 @@ formatter.match({
   "location": "StepDefinitions.validate_the_status_as(String)"
 });
 formatter.result({
-  "duration": 20365814,
+  "duration": 20224965,
   "status": "passed"
 });
 formatter.match({
@@ -194,21 +194,21 @@ formatter.match({
   "location": "StepDefinitions.retrieve_the_value(String)"
 });
 formatter.result({
-  "duration": 268606882,
+  "duration": 262164268,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions.the_environment_URL()"
 });
 formatter.result({
-  "duration": 502701,
+  "duration": 489066,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions.queryParamValues(String,String\u003e)"
 });
 formatter.result({
-  "duration": 460139,
+  "duration": 497971,
   "status": "passed"
 });
 formatter.match({
@@ -221,7 +221,7 @@ formatter.match({
   "location": "StepDefinitions.getresource_name(String)"
 });
 formatter.result({
-  "duration": 318837792,
+  "duration": 313875055,
   "status": "passed"
 });
 formatter.match({
@@ -234,14 +234,14 @@ formatter.match({
   "location": "StepDefinitions.validate_the_status_as(String)"
 });
 formatter.result({
-  "duration": 995162,
+  "duration": 1399370,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions.verify_name_in_post_and_get_are_same()"
 });
 formatter.result({
-  "duration": 2066411,
+  "duration": 2244501,
   "status": "passed"
 });
 });
