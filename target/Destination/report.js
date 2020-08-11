@@ -13,7 +13,7 @@ formatter.feature({
   ]
 });
 formatter.before({
-  "duration": 223278936,
+  "duration": 188620479,
   "status": "passed"
 });
 formatter.scenario({
@@ -138,28 +138,28 @@ formatter.match({
   "location": "StepDefinitions.the_environment_URL()"
 });
 formatter.result({
-  "duration": 495109609,
+  "duration": 472771551,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions.header_values_are_passed(String,String\u003e)"
 });
 formatter.result({
-  "duration": 141611199,
+  "duration": 133385450,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions.queryParamValues(String,String\u003e)"
 });
 formatter.result({
-  "duration": 7399845,
+  "duration": 7375830,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions.payload_is_passed_with_the_expected_values()"
 });
 formatter.result({
-  "duration": 270244880,
+  "duration": 235098016,
   "status": "passed"
 });
 formatter.match({
@@ -172,7 +172,7 @@ formatter.match({
   "location": "StepDefinitions.pass_the_resource_name(String)"
 });
 formatter.result({
-  "duration": 1577407895,
+  "duration": 1553482182,
   "status": "passed"
 });
 formatter.match({
@@ -185,7 +185,7 @@ formatter.match({
   "location": "StepDefinitions.validate_the_status_as(String)"
 });
 formatter.result({
-  "duration": 23055010,
+  "duration": 22894808,
   "status": "passed"
 });
 formatter.match({
@@ -198,21 +198,21 @@ formatter.match({
   "location": "StepDefinitions.retrieve_the_value(String)"
 });
 formatter.result({
-  "duration": 294750548,
+  "duration": 253433485,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions.the_environment_URL()"
 });
 formatter.result({
-  "duration": 401777,
+  "duration": 376368,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions.queryParamValues(String,String\u003e)"
 });
 formatter.result({
-  "duration": 568845,
+  "duration": 417350,
   "status": "passed"
 });
 formatter.match({
@@ -225,7 +225,7 @@ formatter.match({
   "location": "StepDefinitions.getresource_name(String)"
 });
 formatter.result({
-  "duration": 414883881,
+  "duration": 510485107,
   "status": "passed"
 });
 formatter.match({
@@ -238,22 +238,22 @@ formatter.match({
   "location": "StepDefinitions.validate_the_status_as(String)"
 });
 formatter.result({
-  "duration": 931687,
+  "duration": 1004761,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions.verify_name_in_post_and_get_are_same()"
 });
 formatter.result({
-  "duration": 1860932,
+  "duration": 2602800,
   "status": "passed"
 });
 formatter.after({
-  "duration": 287720516,
+  "duration": 276000647,
   "status": "passed"
 });
 formatter.before({
-  "duration": 755176,
+  "duration": 532943,
   "status": "passed"
 });
 formatter.scenario({
@@ -310,14 +310,14 @@ formatter.match({
   "location": "StepDefinitions.the_environment_URL()"
 });
 formatter.result({
-  "duration": 399611,
+  "duration": 484461,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions.queryParamValues(String,String\u003e)"
 });
 formatter.result({
-  "duration": 688744,
+  "duration": 606186,
   "status": "passed"
 });
 formatter.match({
@@ -330,7 +330,7 @@ formatter.match({
   "location": "StepDefinitions.getresource_name(String)"
 });
 formatter.result({
-  "duration": 336234741,
+  "duration": 380221979,
   "status": "passed"
 });
 formatter.match({
@@ -343,11 +343,11 @@ formatter.match({
   "location": "StepDefinitions.validate_the_status_as(String)"
 });
 formatter.result({
-  "duration": 356658,
+  "duration": 668249,
   "status": "passed"
 });
 formatter.after({
-  "duration": 48127449,
+  "duration": 45251713,
   "status": "passed"
 });
 });
