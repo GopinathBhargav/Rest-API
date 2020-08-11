@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 188620479,
+              "duration": 185707319,
               "status": "passed"
             },
             "match": {
@@ -21,7 +21,7 @@
         "after": [
           {
             "result": {
-              "duration": 276000647,
+              "duration": 290648560,
               "status": "passed"
             },
             "match": {
@@ -34,7 +34,7 @@
         "steps": [
           {
             "result": {
-              "duration": 472771551,
+              "duration": 482693488,
               "status": "passed"
             },
             "line": 5,
@@ -46,7 +46,7 @@
           },
           {
             "result": {
-              "duration": 133385450,
+              "duration": 124050892,
               "status": "passed"
             },
             "line": 6,
@@ -67,7 +67,7 @@
           },
           {
             "result": {
-              "duration": 7375830,
+              "duration": 5917057,
               "status": "passed"
             },
             "line": 8,
@@ -88,7 +88,7 @@
           },
           {
             "result": {
-              "duration": 235098016,
+              "duration": 275500786,
               "status": "passed"
             },
             "line": 10,
@@ -100,7 +100,7 @@
           },
           {
             "result": {
-              "duration": 1553482182,
+              "duration": 1068679497,
               "status": "passed"
             },
             "comments": [
@@ -128,7 +128,7 @@
           },
           {
             "result": {
-              "duration": 22894808,
+              "duration": 23258249,
               "status": "passed"
             },
             "line": 15,
@@ -146,7 +146,7 @@
           },
           {
             "result": {
-              "duration": 253433485,
+              "duration": 235081443,
               "status": "passed"
             },
             "line": 16,
@@ -164,7 +164,7 @@
           },
           {
             "result": {
-              "duration": 376368,
+              "duration": 402488,
               "status": "passed"
             },
             "line": 17,
@@ -176,7 +176,7 @@
           },
           {
             "result": {
-              "duration": 417350,
+              "duration": 590227,
               "status": "passed"
             },
             "line": 18,
@@ -204,7 +204,7 @@
           },
           {
             "result": {
-              "duration": 510485107,
+              "duration": 422836458,
               "status": "passed"
             },
             "line": 21,
@@ -222,7 +222,7 @@
           },
           {
             "result": {
-              "duration": 1004761,
+              "duration": 982427,
               "status": "passed"
             },
             "line": 22,
@@ -240,7 +240,7 @@
           },
           {
             "result": {
-              "duration": 2602800,
+              "duration": 1940461,
               "status": "passed"
             },
             "line": 23,
@@ -255,120 +255,6 @@
           {
             "line": 3,
             "name": "@add"
-          }
-        ]
-      },
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 532943,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.runbefore(Scenario)"
-            }
-          }
-        ],
-        "line": 26,
-        "name": "get details",
-        "description": "",
-        "id": "adding-a-place;get-details",
-        "after": [
-          {
-            "result": {
-              "duration": 45251713,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.runafter(Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 484461,
-              "status": "passed"
-            },
-            "line": 27,
-            "name": "the environment URL",
-            "match": {
-              "location": "StepDefinitions.the_environment_URL()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 606186,
-              "status": "passed"
-            },
-            "line": 28,
-            "name": "query parameters are passed",
-            "match": {
-              "location": "StepDefinitions.queryParamValues(String,String\u003e)"
-            },
-            "rows": [
-              {
-                "cells": [
-                  "key",
-                  "qaclick123"
-                ],
-                "line": 29
-              },
-              {
-                "cells": [
-                  "place_id",
-                  "9a6865ed31ffa3cefc2eb40a211d0762"
-                ],
-                "line": 30
-              }
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 380221979,
-              "status": "passed"
-            },
-            "line": 31,
-            "name": "pass the \"get\" resource name passed",
-            "match": {
-              "arguments": [
-                {
-                  "val": "get",
-                  "offset": 10
-                }
-              ],
-              "location": "StepDefinitions.getresource_name(String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 668249,
-              "status": "passed"
-            },
-            "line": 32,
-            "name": "validate the status as \"200\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "200",
-                  "offset": 24
-                }
-              ],
-              "location": "StepDefinitions.validate_the_status_as(String)"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 25,
-            "name": "@get"
           }
         ]
       }

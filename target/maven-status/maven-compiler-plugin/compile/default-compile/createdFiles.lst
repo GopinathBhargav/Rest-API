@@ -1,3 +1,9 @@
+selenium/SpiceJet.class
+selenium/MouseActions.class
 payloads/TestData.class
 payloads/Pojo.class
+selenium/BootStrapDropDown.class
 payloads/Location.class
+exceldata/Exceldatadriven.class
+selenium/SeleniumJavaCode.class
+selenium/WindowHandleDemo.class
