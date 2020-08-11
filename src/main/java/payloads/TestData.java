@@ -25,6 +25,7 @@ public class TestData {
 			al.add("def");
 			p.setTypes(al);
 			p.setWebsite("www.google.com");
+			
 		} catch (Exception e) {
 			step.write("exception occured:" + e.toString());
 		}

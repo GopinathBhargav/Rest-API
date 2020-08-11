@@ -12,6 +12,10 @@ formatter.feature({
     }
   ]
 });
+formatter.before({
+  "duration": 223278936,
+  "status": "passed"
+});
 formatter.scenario({
   "line": 4,
   "name": "Adding a place and verifying it",
@@ -134,28 +138,28 @@ formatter.match({
   "location": "StepDefinitions.the_environment_URL()"
 });
 formatter.result({
-  "duration": 548800191,
+  "duration": 495109609,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions.header_values_are_passed(String,String\u003e)"
 });
 formatter.result({
-  "duration": 149498458,
+  "duration": 141611199,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions.queryParamValues(String,String\u003e)"
 });
 formatter.result({
-  "duration": 8373863,
+  "duration": 7399845,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions.payload_is_passed_with_the_expected_values()"
 });
 formatter.result({
-  "duration": 283731807,
+  "duration": 270244880,
   "status": "passed"
 });
 formatter.match({
@@ -168,7 +172,7 @@ formatter.match({
   "location": "StepDefinitions.pass_the_resource_name(String)"
 });
 formatter.result({
-  "duration": 767731316,
+  "duration": 1577407895,
   "status": "passed"
 });
 formatter.match({
@@ -181,7 +185,7 @@ formatter.match({
   "location": "StepDefinitions.validate_the_status_as(String)"
 });
 formatter.result({
-  "duration": 20224965,
+  "duration": 23055010,
   "status": "passed"
 });
 formatter.match({
@@ -194,21 +198,21 @@ formatter.match({
   "location": "StepDefinitions.retrieve_the_value(String)"
 });
 formatter.result({
-  "duration": 262164268,
+  "duration": 294750548,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions.the_environment_URL()"
 });
 formatter.result({
-  "duration": 489066,
+  "duration": 401777,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions.queryParamValues(String,String\u003e)"
 });
 formatter.result({
-  "duration": 497971,
+  "duration": 568845,
   "status": "passed"
 });
 formatter.match({
@@ -221,7 +225,7 @@ formatter.match({
   "location": "StepDefinitions.getresource_name(String)"
 });
 formatter.result({
-  "duration": 313875055,
+  "duration": 414883881,
   "status": "passed"
 });
 formatter.match({
@@ -234,14 +238,116 @@ formatter.match({
   "location": "StepDefinitions.validate_the_status_as(String)"
 });
 formatter.result({
-  "duration": 1399370,
+  "duration": 931687,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions.verify_name_in_post_and_get_are_same()"
 });
 formatter.result({
-  "duration": 2244501,
+  "duration": 1860932,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 287720516,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 755176,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 26,
+  "name": "get details",
+  "description": "",
+  "id": "adding-a-place;get-details",
+  "type": "scenario",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 25,
+      "name": "@get"
+    }
+  ]
+});
+formatter.step({
+  "line": 27,
+  "name": "the environment URL",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 28,
+  "name": "query parameters are passed",
+  "rows": [
+    {
+      "cells": [
+        "key",
+        "qaclick123"
+      ],
+      "line": 29
+    },
+    {
+      "cells": [
+        "place_id",
+        "9a6865ed31ffa3cefc2eb40a211d0762"
+      ],
+      "line": 30
+    }
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 31,
+  "name": "pass the \"get\" resource name passed",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 32,
+  "name": "validate the status as \"200\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "StepDefinitions.the_environment_URL()"
+});
+formatter.result({
+  "duration": 399611,
+  "status": "passed"
+});
+formatter.match({
+  "location": "StepDefinitions.queryParamValues(String,String\u003e)"
+});
+formatter.result({
+  "duration": 688744,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "get",
+      "offset": 10
+    }
+  ],
+  "location": "StepDefinitions.getresource_name(String)"
+});
+formatter.result({
+  "duration": 336234741,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "200",
+      "offset": 24
+    }
+  ],
+  "location": "StepDefinitions.validate_the_status_as(String)"
+});
+formatter.result({
+  "duration": 356658,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 48127449,
   "status": "passed"
 });
 });

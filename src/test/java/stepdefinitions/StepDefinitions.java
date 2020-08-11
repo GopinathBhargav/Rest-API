@@ -63,19 +63,16 @@ public class StepDefinitions {
 	public void header_values_are_passed(Map<String, String> arg1) throws Throwable {
 
 		try {
-			// to print output in text --> PrintStream log = new PrintStream(new
-			// FileOutputStream("outputlog.txt"));
+			// to print output in text --> PrintStream log = new PrintStream(new FileOutputStream("outputlog.txt"));
+			// to print log in output file --> rs = given().filter(new RequestLoggingFilter(log)).filter(new
+			// ResponseLoggingFilter(log));
+			rs = given().filter(new RequestLoggingFilter()).filter(new ResponseLoggingFilter());
 			Set<Entry<String, String>> set = arg1.entrySet();
 			Iterator<Entry<String, String>> it = set.iterator();
-			while (it.hasNext()) {
+			while (it.hasNext()) {	
 				Entry<String, String> entry = it.next();
 				String key = entry.getKey();
 				String value = entry.getValue();
-				// to print log in output file
-				// rs = given().filter(new RequestLoggingFilter(log)).filter(new
-				// ResponseLoggingFilter(log));
-				rs = given().filter(new RequestLoggingFilter()).filter(new ResponseLoggingFilter());
-
 				rs = rs.header(key, value);
 			}
 		} catch (Exception e) {
@@ -135,6 +132,7 @@ public class StepDefinitions {
 	@Then("^validate the status as \"([^\"]*)\"$")
 	public void validate_the_status_as(String arg1) throws Throwable {
 		try {
+			
 			int status = res.getStatusCode();
 			int arg = Integer.parseInt(arg1);
 			if (status == arg) {
@@ -168,6 +166,7 @@ public class StepDefinitions {
 	    // Write code here that turns the phrase above into concrete actions
 	String getname = TestData.p.getName(); 
 		assertEquals(getname.toString(), "gopi");
+		
 	   
 	}
 

@@ -1,18 +1,29 @@
 package common;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.net.URL;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Properties;
+import java.util.Set;
 
+import stepdefinitions.MongoDBConnections;
 import stepdefinitions.StepDefinitions;
 
 public class CommonUtils {
 	public static Properties prop = new Properties();
 	public static FileInputStream fis;
 	public static String dirpath = System.getProperty("user.dir");
-
+	
+	public final URL mymongourl = getClass().getClassLoader().getResource("config.properties");
+	
 	public static String baseurl() {
 		String url = "";
+		//public URL mymongourl = getClass().getClassLoader().getResource("config.properties");
 		try {
+			//FileInputStream fis = new FileInputStream(mymongourl.getFile());
 			fis = new FileInputStream(dirpath + "/src/test/java/resources/config.properties");
 			prop.load(fis);
 			url = prop.getProperty("testURL");
@@ -37,5 +48,40 @@ public class CommonUtils {
 		}
 		return resourceurl;
 	}
+	
+	public static String getReportConfigPath()
+	{
+	
+		
+		String reportConfigPath = dirpath + "/src/test/java/resources/extent-config.xml";
+		if(reportConfigPath!= null) 
+			return reportConfigPath;
+		else throw new RuntimeException("Report Config Path not specified in the Configuration.properties file for the Key:reportConfigPath");		
+	}
+	
+	public void checkurl() throws FileNotFoundException
+	{
+		Map<String,String> map = System.getenv();
+		Set<Entry<String,String>> set  = map.entrySet();
+		Iterator<Entry<String,String>> it = set.iterator();
+		while(it.hasNext())
+		{
+			Entry<String,String> entry = it.next();
+			
+			System.out.println("key is : "+entry.getKey()+" AND "+"value is :"+ entry.getValue());
+			
+		}
+		
+		//System.out.println("mymongo url value is " + mymongourl);
+		//fis = new FileInputStream(mymongourl.getFile());
+		//System.out.println(fis);
+	}
 
+	public static void main(String args[]) throws FileNotFoundException
+	{
+		CommonUtils c = new CommonUtils();
+		
+		//System.out.println(baseurl());
+		c.checkurl();
+	}
 }

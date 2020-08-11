@@ -3,16 +3,38 @@
     "line": 2,
     "elements": [
       {
+        "before": [
+          {
+            "result": {
+              "duration": 223278936,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.runbefore(Scenario)"
+            }
+          }
+        ],
         "line": 4,
         "name": "Adding a place and verifying it",
         "description": "",
         "id": "adding-a-place;adding-a-place-and-verifying-it",
+        "after": [
+          {
+            "result": {
+              "duration": 287720516,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.runafter(Scenario)"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 548800191,
+              "duration": 495109609,
               "status": "passed"
             },
             "line": 5,
@@ -24,7 +46,7 @@
           },
           {
             "result": {
-              "duration": 149498458,
+              "duration": 141611199,
               "status": "passed"
             },
             "line": 6,
@@ -45,7 +67,7 @@
           },
           {
             "result": {
-              "duration": 8373863,
+              "duration": 7399845,
               "status": "passed"
             },
             "line": 8,
@@ -66,7 +88,7 @@
           },
           {
             "result": {
-              "duration": 283731807,
+              "duration": 270244880,
               "status": "passed"
             },
             "line": 10,
@@ -78,7 +100,7 @@
           },
           {
             "result": {
-              "duration": 767731316,
+              "duration": 1577407895,
               "status": "passed"
             },
             "comments": [
@@ -106,7 +128,7 @@
           },
           {
             "result": {
-              "duration": 20224965,
+              "duration": 23055010,
               "status": "passed"
             },
             "line": 15,
@@ -124,7 +146,7 @@
           },
           {
             "result": {
-              "duration": 262164268,
+              "duration": 294750548,
               "status": "passed"
             },
             "line": 16,
@@ -142,7 +164,7 @@
           },
           {
             "result": {
-              "duration": 489066,
+              "duration": 401777,
               "status": "passed"
             },
             "line": 17,
@@ -154,7 +176,7 @@
           },
           {
             "result": {
-              "duration": 497971,
+              "duration": 568845,
               "status": "passed"
             },
             "line": 18,
@@ -182,7 +204,7 @@
           },
           {
             "result": {
-              "duration": 313875055,
+              "duration": 414883881,
               "status": "passed"
             },
             "line": 21,
@@ -200,7 +222,7 @@
           },
           {
             "result": {
-              "duration": 1399370,
+              "duration": 931687,
               "status": "passed"
             },
             "line": 22,
@@ -218,7 +240,7 @@
           },
           {
             "result": {
-              "duration": 2244501,
+              "duration": 1860932,
               "status": "passed"
             },
             "line": 23,
@@ -233,6 +255,120 @@
           {
             "line": 3,
             "name": "@add"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 755176,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.runbefore(Scenario)"
+            }
+          }
+        ],
+        "line": 26,
+        "name": "get details",
+        "description": "",
+        "id": "adding-a-place;get-details",
+        "after": [
+          {
+            "result": {
+              "duration": 48127449,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.runafter(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 399611,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "the environment URL",
+            "match": {
+              "location": "StepDefinitions.the_environment_URL()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 688744,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "query parameters are passed",
+            "match": {
+              "location": "StepDefinitions.queryParamValues(String,String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "key",
+                  "qaclick123"
+                ],
+                "line": 29
+              },
+              {
+                "cells": [
+                  "place_id",
+                  "9a6865ed31ffa3cefc2eb40a211d0762"
+                ],
+                "line": 30
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 336234741,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "pass the \"get\" resource name passed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "get",
+                  "offset": 10
+                }
+              ],
+              "location": "StepDefinitions.getresource_name(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 356658,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "validate the status as \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 24
+                }
+              ],
+              "location": "StepDefinitions.validate_the_status_as(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 25,
+            "name": "@get"
           }
         ]
       }
