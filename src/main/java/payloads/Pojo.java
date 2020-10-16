@@ -3,8 +3,8 @@ package payloads;
 import java.util.ArrayList;
 import java.util.List;
 
-import cucumber.api.Scenario;
-
+//import cucumber.api.Scenario;
+import io.cucumber.java.Scenario;
 public class Pojo {
 	private Location location;
 	private int accuracy;

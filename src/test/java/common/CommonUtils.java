@@ -2,7 +2,11 @@ package common;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -47,6 +51,13 @@ public class CommonUtils {
 			StepDefinitions.step.write("exception occured:" + e.toString());
 		}
 		return resourceurl;
+	}
+	
+	public static String readjsonbody(String path) throws Exception
+	{
+		Path p = Paths.get(path);
+		return new String(Files.readAllBytes(p));
+		
 	}
 	
 	public static String getReportConfigPath()

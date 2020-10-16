@@ -70,6 +70,7 @@ public class MongoDBConnections {
 		al.add("ajman");
 		//collection.remove(new BasicDBObject("city", "dubai"));
 		dbobjs.put("city", new BasicDBObject("$in", al));
+		//collection.insert(dbobjs);
 		WriteResult wr =collection.remove(dbobjs);
 		System.out.println("deleted records are "+wr.getN());
 		

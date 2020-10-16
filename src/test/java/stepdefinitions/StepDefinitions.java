@@ -6,6 +6,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.PrintStream;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -15,16 +16,21 @@ import java.util.Set;
 
 import org.junit.Before;
 
-import com.sun.tools.sjavac.Log;
+//import com.sun.tools.sjavac.Log;
 
 import common.CommonUtils;
 
 import static io.restassured.RestAssured.*;
-import cucumber.api.DataTable;
+
+import io.cucumber.java.Scenario;
+/*import cucumber.api.DataTable;
 import cucumber.api.Scenario;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+import cucumber.api.java.en.When;*/
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import io.restassured.RestAssured;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;
@@ -48,6 +54,7 @@ public class StepDefinitions {
 	public JsonPath js; 
 	public String body;
 	public static Scenario step;
+	public static String systempath = System.getProperty("user.dir");
 
 	@Given("^the environment URL$")
 	public void the_environment_URL() throws Throwable {
@@ -57,7 +64,18 @@ public class StepDefinitions {
 
 		RestAssured.urlEncodingEnabled = false;
 		RestAssured.useRelaxedHTTPSValidation();
+		
 	}
+	
+	
+	
+	//Set<Entry<String, String>> set = arg1.entrySet();
+	//Iterator<Entry<String, String>> it = set.iterator();
+	//while (it.hasNext()) {	
+	//	Entry<String, String> entry = it.next();
+	//	String key = entry.getKey();
+	//	String value = entry.getValue();
+	//	rs = rs.header(key, value);}
 
 	@When("^header values are passed$")
 	public void header_values_are_passed(Map<String, String> arg1) throws Throwable {
@@ -66,15 +84,19 @@ public class StepDefinitions {
 			// to print output in text --> PrintStream log = new PrintStream(new FileOutputStream("outputlog.txt"));
 			// to print log in output file --> rs = given().filter(new RequestLoggingFilter(log)).filter(new
 			// ResponseLoggingFilter(log));
+			
 			rs = given().filter(new RequestLoggingFilter()).filter(new ResponseLoggingFilter());
+			HashMap<String,Object> header = new HashMap<String,Object>();
 			Set<Entry<String, String>> set = arg1.entrySet();
 			Iterator<Entry<String, String>> it = set.iterator();
 			while (it.hasNext()) {	
+				
 				Entry<String, String> entry = it.next();
-				String key = entry.getKey();
+			String key = entry.getKey();
 				String value = entry.getValue();
-				rs = rs.header(key, value);
+				header.put(key, value);
 			}
+			rs.headers(header);
 		} catch (Exception e) {
 			step.write("exception occured:" + e.toString());
 		}
@@ -91,6 +113,7 @@ public class StepDefinitions {
 				if (value.contains("ENV-")) {
 					String placevalue = (value.split("ENV-"))[1];
 					rs = rs.queryParam(key, System.getProperty(placevalue));
+				
 				} else {
 					rs = rs.queryParam(key, value);
 				}
@@ -103,13 +126,41 @@ public class StepDefinitions {
 	@When("^payload is passed with the expected values$")
 	public void payload_is_passed_with_the_expected_values() throws Throwable {
 
-		try {
-			rs = rs.body(TestData.addplace());
-			// rs =rs.body(TestData.addplace());
-		} catch (Exception e) {
-			step.write("exception occured:" + e.toString());
-		}
+		
+		 try { 
+			 rs = rs.body(TestData.addplace()); 
+			 // rs =rs.body(TestData.addplace());
+		 } 
+		 catch (Exception e) 
+		 { 
+			 step.write("exception occured:" + e.toString());
+		 }
+		 
 	}
+	
+	@When("payload is passed with the expected values along with json file {string}")
+	public void payload_is_passed_with_the_expected_values_along_with_json_file(String jsonpath, Map<String, String> body) throws Exception {
+	     // Write code here that turns the phrase above into concrete actions
+	   String expectedresponse = "";
+	  expectedresponse = CommonUtils.readjsonbody(systempath+"/src/test/java/resources/"+jsonpath+".json");
+	  Iterator<Entry<String,String>> it = body.entrySet().iterator();
+	  while(it.hasNext())
+	{
+		  Entry<String,String> entry = it.next();
+		  String key = entry.getKey();
+		  String value = entry.getValue();
+		  if (expectedresponse.contains("%"+key))			  
+		  {
+			expectedresponse = expectedresponse.replace("%"+key, value);
+		}
+	  }
+	  
+	  rs=rs.body(expectedresponse);
+	  
+	   
+	}
+	
+	
 
 	@When("^pass the \"([^\"]*)\" resource name$")
 	public void pass_the_resource_name(String postresource) throws Throwable {
@@ -139,7 +190,7 @@ public class StepDefinitions {
 				res = res.then().assertThat().statusCode(arg).extract().response();
 			} else {
 				// Log.info("status is not as expected value"+status);
-				Log.info("status is not as expected value" + status);
+				
 				assertEquals(status, arg);
 			}
 		} catch (Exception e) {
@@ -154,7 +205,8 @@ public class StepDefinitions {
 			js = new JsonPath(body);
 			String placeid = js.get(arg1);
 			System.out.println("place id is" + placeid);
-			System.setProperty("place_id", placeid);
+		//System.setProperty(key, value)
+			System.setProperty("place_name", placeid);
 		} catch (Exception e) {
 
 			step.write("exception occured:" + e.toString());
@@ -165,7 +217,7 @@ public class StepDefinitions {
 	public void verify_name_in_post_and_get_are_same() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 	String getname = TestData.p.getName(); 
-		assertEquals(getname.toString(), "gopi");
+		assertEquals(getname.toString(), "bhargav");
 		
 	   
 	}

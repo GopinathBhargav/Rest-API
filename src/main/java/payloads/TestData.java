@@ -1,8 +1,8 @@
 package payloads;
 
 import java.util.ArrayList;
-import cucumber.api.Scenario;
-
+//import cucumber.api.Scenario;
+import io.cucumber.java.Scenario;
 public class TestData {
 	public static Pojo p = new Pojo();
 	public static Scenario step;
@@ -18,7 +18,7 @@ public class TestData {
 			l.setLat(1234);
 			l.setLng(-567.09);
 			p.setLocation(l);
-			p.setName("gopi");
+			p.setName("bhargav");
 			p.setPhone_number(123456789);
 			ArrayList<String> al = new ArrayList<String>();
 			al.add("abc");
