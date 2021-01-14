@@ -20,14 +20,14 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		strict = true,
-features="src/test/java/features",
+features="@target/failedtestcases.txt",
 monochrome = true,
 plugin = {"json:target/jsonReports/cucumber-report.json","rerun:target/failedtestcases.txt"
 		//"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
 		},
 glue="stepdefinitions"
 )
-public class TestRunner {
+public class TestRunnerFailed {
 
 	
 	@BeforeClass

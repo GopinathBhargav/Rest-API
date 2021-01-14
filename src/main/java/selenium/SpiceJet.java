@@ -48,7 +48,7 @@ public class SpiceJet {
 	    	  WebDriverWait wait = new WebDriverWait(driver, 3);
 	    	  //wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-right'] //span[text()='Next']")));
 	    	  driver.findElement(By.xpath("//div[@class='ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-right'] //span[text()='Next']")).click();
-	    	 //wait.until(ExpectedConditions.)
+	    	// wait.until(ExpectedConditions.)
 	      }
 	      driver.findElement(By.xpath("//td[@data-month='9'] //*[text()='10']")).click();
 	      

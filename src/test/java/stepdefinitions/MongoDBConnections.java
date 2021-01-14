@@ -49,6 +49,7 @@ public class MongoDBConnections {
 		 * dbobj.append("name", "gopi"); dbobj.put("age", 20);
 		 */
 		//collection.insert(dbobj);
+	
 		
 		HashMap<String,Object> hmap = new HashMap<String,Object>();
 		
@@ -74,7 +75,7 @@ public class MongoDBConnections {
 		WriteResult wr =collection.remove(dbobjs);
 		System.out.println("deleted records are "+wr.getN());
 		
-		// insertRpaz
+		// insert
 		BasicDBObject basicdb = new BasicDBObject();
 		basicdb.append("name", "gopi");
 		basicdb.append("age", 00);

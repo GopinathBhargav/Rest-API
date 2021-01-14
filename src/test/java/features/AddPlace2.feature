@@ -1,8 +1,6 @@
-@addplace 
+@addplaceNew 
 Feature: adding a place 
-@add 
-
-
+@addNew 
 Scenario: Adding a place and verifying it 
 	Given the environment URL 
 	When header values are passed 
@@ -23,10 +21,10 @@ Scenario: Adding a place and verifying it
 		|key |qaclick123 | 
 		|place_id| ENV-place_name |
 	And pass the "get" resource name passed 
-	Then validate the status as "201" 
+	Then validate the status as "200" 
 	#And verify name in post and get are same 
 	
-@get 
+@getNew 
 Scenario: get details 
 	Given the environment URL 
 	And query parameters are passed 

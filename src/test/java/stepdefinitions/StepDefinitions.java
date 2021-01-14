@@ -14,6 +14,8 @@ import java.util.Map.Entry;
 import java.util.Properties;
 import java.util.Set;
 
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 import org.junit.Before;
 
 //import com.sun.tools.sjavac.Log;
@@ -46,7 +48,7 @@ public class StepDefinitions {
 	@Before
 	public void beforeeverymethod()
 	{
-		System.out.println("**************before method*****************");
+		System.out.println("************** before method *****************");
 	}
 
 	public static RequestSpecification rs;
@@ -67,7 +69,12 @@ public class StepDefinitions {
 		
 	}
 	
-	
+	/*
+	 * public void set() 
+	 * { 
+	 * RestAssured.given().auth().oauth2(accessToken); 
+	 * }
+	 */
 	
 	//Set<Entry<String, String>> set = arg1.entrySet();
 	//Iterator<Entry<String, String>> it = set.iterator();
@@ -202,6 +209,9 @@ public class StepDefinitions {
 	public void retrieve_the_value(String arg1) throws Throwable {
 		try {
 			body = res.getBody().asString();
+			JSONParser parser = new JSONParser(); 
+			JSONObject json = (JSONObject) parser.parse(body); 
+			System.out.println("json value is" +json);
 			js = new JsonPath(body);
 			String placeid = js.get(arg1);
 			System.out.println("place id is" + placeid);
