@@ -32,7 +32,8 @@ public class CommonUtils {
 			prop.load(fis);
 			url = prop.getProperty("testURL");
 		} catch (Exception e) {
-			StepDefinitions.step.write("exception occured:" + e.toString());
+			//StepDefinitions.step.write("exception occured:" + e.toString());
+			System.out.println("exception occured:" + e.toString());
 		}
 		return url;
 	}
@@ -48,7 +49,8 @@ public class CommonUtils {
 			resourceurl = prop.getProperty(resource);
 
 		} catch (Exception e) {
-			StepDefinitions.step.write("exception occured:" + e.toString());
+			//StepDefinitions.step.write("exception occured:" + e.toString());
+			System.out.println("exception occured:" + e.toString());
 		}
 		return resourceurl;
 	}

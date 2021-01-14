@@ -1,8 +1,6 @@
 @addplace 
 Feature: adding a place 
 @add 
-
-
 Scenario: Adding a place and verifying it 
 	Given the environment URL 
 	When header values are passed 

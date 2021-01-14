@@ -22,8 +22,9 @@ import io.cucumber.junit.CucumberOptions;
 		strict = true,
 features="src/test/java/features",
 monochrome = true,
-plugin = {"json:target/jsonReports/cucumber-report.json","rerun:target/failedtestcases.txt"
-		//"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
+plugin = {"rerun:target/failedtestcases.txt",
+		"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+		"json:target/jsonReports/cucumber-report.json",
 		},
 glue="stepdefinitions"
 )
@@ -46,10 +47,6 @@ public class TestRunner {
 		System.out.println("===================== Run once after whole feature file =======================");
 	}
 	
-	/*@CucumberOptions(
-	features="src/test/java/features", glue="stepdefinitions",tags= {"@addplace"},
-plugin= {"json:target/jsonreports/cucumberreports.json", 
-"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
-)*/
+
 
 }

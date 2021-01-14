@@ -105,7 +105,8 @@ public class StepDefinitions {
 			}
 			rs.headers(header);
 		} catch (Exception e) {
-			step.write("exception occured:" + e.toString());
+			//step.write("exception occured:" + e.toString());
+			System.out.println("exception occured:" + e.toString());
 		}
 	}
 
@@ -126,7 +127,8 @@ public class StepDefinitions {
 				}
 			}
 		} catch (Exception e) {
-			step.write("exception occured:" + e.toString());
+			//step.write("exception occured:" + e.toString());
+			System.out.println("exception occured:" + e.toString());
 		}
 	}
 
@@ -140,7 +142,8 @@ public class StepDefinitions {
 		 } 
 		 catch (Exception e) 
 		 { 
-			 step.write("exception occured:" + e.toString());
+			 //step.write("exception occured:" + e.toString());
+			 System.out.println("exception occured:" + e.toString());
 		 }
 		 
 	}
@@ -174,7 +177,8 @@ public class StepDefinitions {
 		try {
 			res = rs.when().post(CommonUtils.resourceUrl(postresource));
 		} catch (Exception e) {
-			step.write("exception occured:" + e.toString());
+			//step.write("exception occured:" + e.toString());
+			System.out.println("exception occured:" + e.toString());
 		}
 	}
 	
@@ -183,7 +187,8 @@ public class StepDefinitions {
 		try {
 			res = rs.when().get(CommonUtils.resourceUrl(getresource));
 		} catch (Exception e) {
-			step.write("exception occured:" + e.toString());
+			//step.write("exception occured:" + e.toString());
+			System.out.println("exception occured:" + e.toString());
 		}
 	}
 
@@ -201,7 +206,8 @@ public class StepDefinitions {
 				assertEquals(status, arg);
 			}
 		} catch (Exception e) {
-			step.write("exception occured:" + e.toString());
+			//step.write("exception occured:" + e.toString());
+			System.out.println("exception occured:" + e.toString());
 		}
 	}
 
@@ -219,7 +225,8 @@ public class StepDefinitions {
 			System.setProperty("place_name", placeid);
 		} catch (Exception e) {
 
-			step.write("exception occured:" + e.toString());
+			//step.write("exception occured:" + e.toString());
+			System.out.println("exception occured:" + e.toString());
 		}
 	}
 	

@@ -27,7 +27,8 @@ public class TestData {
 			p.setWebsite("www.google.com");
 			
 		} catch (Exception e) {
-			step.write("exception occured:" + e.toString());
+			//step.write("exception occured:" + e.toString());
+			System.out.println("exception occured:" + e.toString());
 		}
 		return p;
 	}
