@@ -2,6 +2,7 @@ selenium/SpiceJet.class
 selenium/MouseActions.class
 payloads/TestData.class
 payloads/Pojo.class
+FileClass.class
 selenium/BootStrapDropDown.class
 payloads/Location.class
 exceldata/Exceldatadriven.class

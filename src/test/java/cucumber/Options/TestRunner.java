@@ -22,9 +22,9 @@ import io.cucumber.junit.CucumberOptions;
 		strict = true,
 features="src/test/java/features",
 monochrome = true,
-plugin = {"rerun:target/failedtestcases.txt",
+plugin = {"pretty","rerun:target/failedtestcases.txt",
 		"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
-		"json:target/jsonReports/cucumber-report.json",
+		"json:target/jsonReports/cucumber-report.json","timeline:test-output-thread/"
 		},
 glue="stepdefinitions"
 )

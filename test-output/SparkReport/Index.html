@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Grasshopper Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Jan 15, 2021 12:56:59 AM</span></a>
+<a href="#"><span class="badge badge-primary">Jan 16, 2021 01:06:08 PM</span></a>
 </li>
 </ul>
 </div>
@@ -71,13 +71,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Jan 15, 2021 12:56:59 AM</h3>
+<h3>Jan 16, 2021 01:06:08 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Jan 15, 2021 12:57:08 AM</h3>
+<h3>Jan 16, 2021 01:06:18 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -167,7 +167,7 @@
 </div></div>
 <script>
 var timeline = {
-"adding a place":8.557
+"adding a place":9.476
 };
 </script>
 <div class="row">
@@ -176,6 +176,14 @@ var timeline = {
 <div class="card-header"><p>Tags</p></div>
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>@add</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
 <tr>
 <td>@get</td>
 <td>1</td>
@@ -187,14 +195,6 @@ var timeline = {
 <tr>
 <td>@addplaceNew</td>
 <td>2</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>100%</td>
-</tr>
-<tr>
-<td>@getNew</td>
-<td>1</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -217,12 +217,12 @@ var timeline = {
 <td>100%</td>
 </tr>
 <tr>
-<td>@add</td>
-<td>0</td>
+<td>@getNew</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
-<td>0%</td>
+<td>0</td>
+<td>100%</td>
 </tr>
 </tbody>
 </table></div>
@@ -295,7 +295,7 @@ eventsCount: 5,
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@get</a><a class="dropdown-item" href="#">@addplaceNew</a><a class="dropdown-item" href="#">@getNew</a><a class="dropdown-item" href="#">@addplace</a><a class="dropdown-item" href="#">@addNew</a><a class="dropdown-item" href="#">@add</a>
+<a class="dropdown-item" href="#">@add</a><a class="dropdown-item" href="#">@get</a><a class="dropdown-item" href="#">@addplaceNew</a><a class="dropdown-item" href="#">@addplace</a><a class="dropdown-item" href="#">@addNew</a><a class="dropdown-item" href="#">@getNew</a>
 </ul>
 </li>
 </ul>
@@ -308,7 +308,7 @@ eventsCount: 5,
           <div class="test-detail">
             <p class="name">adding a place</p>
             <p class="text-sm">
-              <span>00:57:00 AM</span> / <span>00:00:08:557</span>
+              <span>13:06:09 PM</span> / <span>00:00:09:476</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -317,9 +317,9 @@ eventsCount: 5,
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-fail">adding a place</h5>
-<span class='badge badge-success'>01.15.2021 00:57:00</span>
-<span class='badge badge-danger'>01.15.2021 00:57:08</span>
-<span class='badge badge-default'>00:00:08:557</span>
+<span class='badge badge-success'>01.16.2021 13:06:09</span>
+<span class='badge badge-danger'>01.16.2021 13:06:18</span>
+<span class='badge badge-default'>00:00:09:476</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 </div>
 <div class="m-t-15"><span class="badge badge-pill badge-default">@addplace</span></div>
@@ -573,6 +573,42 @@ eventsCount: 5,
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@add</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@add</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:06:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Adding a place and verifying it</a>
+<div class="">
+<span class="badge badge-default">adding a place.Adding a place and verifying it</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
 <span class='badge log pass-bg'>1</span>
 </span>
 <p class="name">@get</p>
@@ -594,7 +630,7 @@ eventsCount: 5,
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>00:57:03 AM</td>
+<td>13:06:13 PM</td>
 <td>
 <a href="#" class="linked" test-id='1' id='16'>get details</a>
 <div class="">
@@ -630,7 +666,7 @@ eventsCount: 5,
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>00:57:05 AM</td>
+<td>13:06:14 PM</td>
 <td>
 <a href="#" class="linked" test-id='1' id='23'>Adding a place and verifying it</a>
 <div class="">
@@ -640,43 +676,7 @@ eventsCount: 5,
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>00:57:07 AM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='37'>get details</a>
-<div class="">
-<span class="badge badge-default">adding a place.get details</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log pass-bg'>1</span>
-</span>
-<p class="name">@getNew</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>@getNew</h4>
-<span status="pass" class='badge log pass-bg'>1 passed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>00:57:07 AM</td>
+<td>13:06:17 PM</td>
 <td>
 <a href="#" class="linked" test-id='1' id='37'>get details</a>
 <div class="">
@@ -714,14 +714,14 @@ eventsCount: 5,
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>00:57:00 AM</td>
+<td>13:06:09 PM</td>
 <td>
 <a href="#" class="linked" test-id='1' id='1'>adding a place</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>00:57:00 AM</td>
+<td>13:06:09 PM</td>
 <td>
 <a href="#" class="linked" test-id='1' id='2'>Adding a place and verifying it</a>
 <div class="">
@@ -731,7 +731,7 @@ eventsCount: 5,
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>00:57:03 AM</td>
+<td>13:06:13 PM</td>
 <td>
 <a href="#" class="linked" test-id='1' id='16'>get details</a>
 <div class="">
@@ -767,7 +767,7 @@ eventsCount: 5,
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>00:57:05 AM</td>
+<td>13:06:14 PM</td>
 <td>
 <a href="#" class="linked" test-id='1' id='23'>Adding a place and verifying it</a>
 <div class="">
@@ -782,15 +782,15 @@ eventsCount: 5,
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log badge-danger'>1</span>
+<span class='badge log pass-bg'>1</span>
 </span>
-<p class="name">@add</p>
+<p class="name">@getNew</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>@add</h4>
-<span status="fail" class='badge log badge-danger'>1 failed</span>
+<h4>@getNew</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -801,13 +801,13 @@ eventsCount: 5,
 </tr>
 </thead>
 <tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>00:57:00 AM</td>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:06:17 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='2'>Adding a place and verifying it</a>
+<a href="#" class="linked" test-id='1' id='37'>get details</a>
 <div class="">
-<span class="badge badge-default">adding a place.Adding a place and verifying it</span>
+<span class="badge badge-default">adding a place.get details</span>
 </div>
 </td>
 </tr>
@@ -855,7 +855,7 @@ eventsCount: 5,
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>00:57:03 AM</td>
+<td>13:06:13 PM</td>
 <td>
 <a href="#" class="linked" test-id='1' id='14'>Then validate the status as "201"</a>
 <div class="">

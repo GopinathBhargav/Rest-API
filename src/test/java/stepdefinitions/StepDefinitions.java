@@ -217,6 +217,7 @@ public class StepDefinitions {
 			body = res.getBody().asString();
 			JSONParser parser = new JSONParser(); 
 			JSONObject json = (JSONObject) parser.parse(body); 
+			// validating whether response is of json
 			System.out.println("json value is" +json);
 			js = new JsonPath(body);
 			String placeid = js.get(arg1);
